@@ -35,7 +35,8 @@ namespace api.Controllers
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)],
-                Host = _configuration.GetValue<string>("CurrentHost")
+                Host = _configuration.GetValue<string>("CurrentHost"),
+                UpdateCheck = "Created at 2021-08-04 17:25"
             })
             .ToArray();
         }

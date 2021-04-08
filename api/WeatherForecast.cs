@@ -13,5 +13,7 @@ namespace api
         public string Summary { get; set; }
 
         public string Host { get; set; }
+
+        public string UpdateCheck { get; set; }
     }
 }

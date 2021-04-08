@@ -24,12 +24,12 @@ spec:
     spec:
       containers:
       - name: api
-        image: "acrdevdemo.azurecr.io/aksdemo/api:v1"
+        image: "acrdevdemo.azurecr.io/aksdemo/api"
         ports:
         - containerPort: 80
         env:
         - name: CurrentHost
-          value: 'AKS-Cluster-v1'
+          value: 'AKS-Cluster'
 ---
 apiVersion: v1
 kind: Service
