@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: "acrdevdemo.azurecr.io/aksdemo/api:v1"
+        image: acrdevdemo.azurecr.io/aksdemo/api:v1
         ports:
         - containerPort: 80
         env:

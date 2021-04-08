@@ -37,8 +37,8 @@ jobs:
           # Container registry server url
           login-server: acrdevdemo.azurecr.io
       - run: |
-          docker build ./api -t "${ACRNAME}/aksdemo/api:${{ github.sha }}"
-          docker push "${ACRNAME}/aksdemo/api:${{ github.sha }}"
+          docker build ./api -t acrdevdemo.azurecr.io/aksdemo/api:${{ github.sha }}
+          docker push acrdevdemo.azurecr.io/aksdemo/api:${{ github.sha }}
   aks:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -61,5 +61,5 @@ jobs:
           manifests: |
             api/deploy-aks.yaml
           images: |
-            "${ACRNAME}/aksdemo/api:${{ github.sha }}"
+            acrdevdemo.azurecr.io/aksdemo/api:${{ github.sha }}
       
