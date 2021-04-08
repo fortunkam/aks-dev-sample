@@ -1,0 +1,24 @@
+# Run local debugging
+GET http://localhost:5000/WeatherForecast
+Content-Type: application/json
+
+###
+
+# Run from docker
+GET http://localhost:5005/WeatherForecast
+Content-Type: application/json
+
+###
+
+# Run from KIND
+
+GET http://localhost:5010/WeatherForecast
+Content-Type: application/json
+
+###
+
+# Run from AKS
+
+GET http://localhost:5015/WeatherForecast
+Content-Type: application/json
+
