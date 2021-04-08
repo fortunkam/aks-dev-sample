@@ -15,8 +15,6 @@ on:
   workflow_dispatch:
 env:
   ACRNAME: acrdevdemo.azurecr.io
-  RGNAME: aks-demo
-  AKSNAME: aks-dev-demo
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -54,8 +52,8 @@ jobs:
       - uses: azure/aks-set-context@v1
         with:
             creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
-            resourceGroupName: "${RGNAME}"
-            clusterName: "${AKSNAME}"
+            resourceGroupName: aks-demo
+            clusterName: aks-dev-demo
         id: login
       - uses: Azure/k8s-deploy@v1
         with:
