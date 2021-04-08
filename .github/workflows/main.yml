@@ -37,7 +37,7 @@ jobs:
           # Container registry password
           password: ${{ secrets.ACR_PASSWORD }}
           # Container registry server url
-          login-server: ${ACRNAME}
+          login-server: "${ACRNAME}"
       - run: |
           docker build ./api -t ${ACRNAME}/aksdemo/api:${{ github.sha }}
           docker push ${ACRNAME}/aksdemo/api:${{ github.sha }}
