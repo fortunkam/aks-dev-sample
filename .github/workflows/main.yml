@@ -39,6 +39,9 @@ jobs:
       - run: |
           docker build ./api -t acrdevdemo.azurecr.io/aksdemo/api:${{ github.sha }}
           docker push acrdevdemo.azurecr.io/aksdemo/api:${{ github.sha }}
+      - run: |
+          docker build ./web -t acrdevdemo.azurecr.io/aksdemo/web:${{ github.sha }} --buid-arg VUE_APP_WEATHER_API_URL=http://20.49.166.59/api/WeatherForecast
+          docker push acrdevdemo.azurecr.io/aksdemo/web:${{ github.sha }}
   aks:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -62,4 +65,11 @@ jobs:
             api/deploy-aks.yaml
           images: |
             acrdevdemo.azurecr.io/aksdemo/api:${{ github.sha }}
+      - uses: Azure/k8s-deploy@v1
+        with:
+          namespace: web
+          manifests: |
+            web/deploy-aks.yaml
+          images: |
+            acrdevdemo.azurecr.io/aksdemo/web:${{ github.sha }}
       

@@ -6,7 +6,7 @@
 
 To run as a docker container, build first with
 
-    docker build . -t aksdemo/api:latest
+    docker build . -t aksdemo/api:v1
 
 then run 
 
@@ -53,7 +53,9 @@ Image should now be in the ACR (repositories tab of ACR)
 
 ## AKS Deploy (from developer machine)
 
-Note `deploy-aks.yaml` will need to be updated with the correct acr name
+Setup the ingress controller
+API will also be available as http://<ingres_public_ip>/api/WeatherForecast
+Note `api/deploy-aks.yaml` will need to be updated with the correct acr name
 If not created at same time will need to attach ACR to AKS (az aks attach-acr?)
 
     kubectl apply -f "deploy-aks.yaml"
