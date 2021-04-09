@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Weather Forecast logo" src="./assets/weather.png" width="200" height="200">
     <WeatherForecast />
   </div>
 </template>

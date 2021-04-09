@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h3> Weather Forecasts:</h3>
     <table class="table">
       <thead>
         <tr>

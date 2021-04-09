@@ -54,6 +54,9 @@ Image should now be in the ACR (repositories tab of ACR)
 ## AKS Deploy (from developer machine)
 
 Setup the ingress controller
+
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.45.0/deploy/static/provider/cloud/deploy.yaml
+
 API will also be available as http://<ingres_public_ip>/api/WeatherForecast
 Note `api/deploy-aks.yaml` will need to be updated with the correct acr name
 If not created at same time will need to attach ACR to AKS (az aks attach-acr?)
