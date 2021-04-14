@@ -76,3 +76,4 @@ If not created at same time will need to attach ACR to AKS (az aks attach-acr?)
 
 
 
+
