@@ -8,6 +8,12 @@ Make sure the kind cluster has no deployments in it.
 Set kind cluster as current
 `kubectl delete deployment weather-deployment -n weather`
 
+## Explain tech
+
+Docker - Works on my machine
+Kubernetes vs AKS
+Terms - Image (specific version or tag), Registry, Namespace, Pod, Deployment, Service, Ingress
+
 ## Explain local setup
 
 Local windows machine running WSL2 - Ubuntu distribution, can be run on windows too but just to highlight as an option.
